@@ -10,6 +10,7 @@
         <module name="springcloud-feign-api-provider-service" />
         <module name="springcloud-feign-api-consumer-service" />
         <module name="springcloud-feign-api-consumer-service-impl" />
+        <module name="springcloud-feign-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

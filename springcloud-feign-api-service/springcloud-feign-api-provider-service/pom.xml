@@ -11,5 +11,13 @@
 
     <artifactId>springcloud-feign-api-provider-service</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.lxq.springboot</groupId>
+            <version>1.0.0</version>
+            <artifactId>springcloud-feign-common</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>

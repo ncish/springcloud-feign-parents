@@ -3,6 +3,7 @@ package com.lxq.springboot.api.service.impl;
 import com.lxq.springboot.api.entity.UserEntity;
 import com.lxq.springboot.api.feign.ProviderServiceFeign;
 import com.lxq.springboot.api.service.IConsumerService;
+import com.lxq.springboot.base.ResponseBase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,5 +28,12 @@ public class ConsumerServiceImpl implements IConsumerService {
         UserEntity userEntity = providerServiceFeign.getProvider(name);
 
         return userEntity==null?"没有找到用户信息":userEntity.toString();
+    }
+
+    @RequestMapping("/consumerToProviderUserInfo")
+    public ResponseBase consumerToProviderUserInfo() {
+
+        return providerServiceFeign.getUserInfo();
+
     }
 }

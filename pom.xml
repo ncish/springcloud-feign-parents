@@ -12,6 +12,7 @@
         <module>springcloud-feign-api-service</module>
         <module>springcloud-feign-api-provider-service-impl</module>
         <module>springcloud-feign-api-consumer-service-impl</module>
+        <module>springcloud-feign-common</module>
     </modules>
 
     <dependencies>
