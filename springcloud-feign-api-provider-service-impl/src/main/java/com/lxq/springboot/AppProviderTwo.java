@@ -3,23 +3,20 @@ package com.lxq.springboot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @Author Ncish
  * @Description
- * @Date 2019-04-21 21:28
+ * @Date 2019-04-21 17:40
  * @Modified By：
  * Company http://www.66ac.com
  */
-
 @SpringBootApplication
-@EnableEurekaClient
 @EnableFeignClients
-@EnableHystrix
-public class AppConsumer {
+@EnableEurekaClient
+public class AppProviderTwo {
     public static void main(String[] args) {
-        SpringApplication.run(AppConsumer.class,args);
+        SpringApplication.run(AppProviderTwo.class,args);
     }
 }

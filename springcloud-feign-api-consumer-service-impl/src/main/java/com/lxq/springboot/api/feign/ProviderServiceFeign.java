@@ -14,4 +14,6 @@ import org.springframework.cloud.openfeign.FeignClient;
 @FeignClient("app-feign-provider")
 public interface ProviderServiceFeign extends IProviderService {
 
+
+
 }

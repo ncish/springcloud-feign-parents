@@ -4,6 +4,7 @@ import com.lxq.springboot.api.entity.UserEntity;
 import com.lxq.springboot.api.service.IProviderService;
 import com.lxq.springboot.base.BaseApiService;
 import com.lxq.springboot.base.ResponseBase;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,10 +19,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProviderServiceImpl extends BaseApiService implements IProviderService {
 
+    @Value("${server.port}")
+    private String serverPort;
+
     @RequestMapping("/getProvider")
     public UserEntity getProvider(@RequestParam("name") String name) {
         UserEntity userEntity = new UserEntity();
-        userEntity.setName(name);
+        userEntity.setName(name +"端口号：" + serverPort);
         userEntity.setAge(22);
         return userEntity;
     }

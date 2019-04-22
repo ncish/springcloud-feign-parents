@@ -18,4 +18,8 @@ public interface IConsumerService {
     //消费者接口调用提供者接口
     @RequestMapping("/consumerToProviderUserInfo")
     public ResponseBase consumerToProviderUserInfo();
+
+    //消费者接口
+    @RequestMapping("/consumerInfo")
+    public ResponseBase consumerInfo();
 }
