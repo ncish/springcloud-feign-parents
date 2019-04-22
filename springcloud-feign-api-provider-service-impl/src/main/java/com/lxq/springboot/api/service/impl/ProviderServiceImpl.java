@@ -3,6 +3,7 @@ package com.lxq.springboot.api.service.impl;
 import com.lxq.springboot.api.entity.UserEntity;
 import com.lxq.springboot.api.service.IProviderService;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProviderServiceImpl implements IProviderService {
 
     @RequestMapping("/getProvider")
-    public UserEntity getProvider(String name) {
+    public UserEntity getProvider(@RequestParam("name") String name) {
         UserEntity userEntity = new UserEntity();
         userEntity.setName(name);
         userEntity.setAge(22);

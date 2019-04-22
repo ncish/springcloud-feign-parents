@@ -12,4 +12,21 @@
     <artifactId>springcloud-feign-api-consumer-service-impl</artifactId>
 
 
+    <dependencies>
+        <!-- 引入消费者接口 -->
+        <dependency>
+            <groupId>com.lxq.springboot</groupId>
+            <version>1.0.0</version>
+            <artifactId>springcloud-feign-api-consumer-service</artifactId>
+        </dependency>
+
+        <!-- 引入提供者接口 -->
+        <dependency>
+            <groupId>com.lxq.springboot</groupId>
+            <version>1.0.0</version>
+            <artifactId>springcloud-feign-api-provider-service</artifactId>
+        </dependency>
+
+    </dependencies>
+
 </project>

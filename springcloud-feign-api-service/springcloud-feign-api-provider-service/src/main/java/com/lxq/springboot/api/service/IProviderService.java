@@ -2,6 +2,7 @@ package com.lxq.springboot.api.service;
 
 import com.lxq.springboot.api.entity.UserEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @Author Ncish
@@ -12,5 +13,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 public interface IProviderService {
     @RequestMapping("/getProvider")
-    public UserEntity getProvider(String name);
+    public UserEntity getProvider(@RequestParam("name") String name);
 }
