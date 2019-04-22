@@ -32,3 +32,4 @@ hystrix.command.default.execution.timeout.enabled=false
     #springcloud-feign-api-service  (maven module模式创建)
           #springcloud-feign-api-consumer-service  (maven module模式创建)
           #springcloud-feign-api-provider-service  (maven module模式创建)
+
